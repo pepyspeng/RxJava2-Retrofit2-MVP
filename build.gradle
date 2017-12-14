@@ -39,4 +39,5 @@ ext {
     rxJavaVersion = "2.1.7"
     rxAndroidVersion = "2.0.1"
     retrofit2Version = "2.3.0"
+    loggerVersion = "2.1.1"
 }

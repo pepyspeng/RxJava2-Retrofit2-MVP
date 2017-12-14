@@ -10,7 +10,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.mvpdemo"
+        applicationId "com.demo"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
@@ -90,5 +90,5 @@ dependencies {
     //fastjson-converter
 //    compile "org.ligboy.retrofit2:converter-fastjson-android:2.3.0"
     //logger
-    implementation 'com.orhanobut:logger:2.1.1'
+    implementation "com.orhanobut:logger:$rootProject.loggerVersion"
 }
