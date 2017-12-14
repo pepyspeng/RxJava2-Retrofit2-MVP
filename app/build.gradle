@@ -1,0 +1,94 @@
+apply plugin: "com.android.application"
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.mvpdemo"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        flavorDimensions 'Environ'
+
+    }
+
+    buildTypes {
+        release {
+            //是否混淆,混淆文件没配置好,暂时不支持
+            minifyEnabled false
+            //混淆配置文件
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            //Zipalign优化
+            zipAlignEnabled true
+            //分包
+            multiDexEnabled false
+
+            android.applicationVariants.all { variant ->
+                variant.outputs.all  {
+                    outputFileName  = "mvp-"+buildType.name+"-v"+defaultConfig.versionName+"-"+productFlavors[0].name+"-"+releaseTime()+".apk"
+//                                .toLowerCase()
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    productFlavors{
+
+        EnvironTest{
+            dimension  "Environ"
+            buildConfigField "String", "ENVIRONMENT", '"debug_environ"'
+//            manifestPlaceholders = [
+//                    "app_name"    : "全域宝",
+//                    "app_icon"    : "@mipmap/icon_launcher_pre",
+//                    "umeng_appkey": "58b8d93a1c5dd0100b00250e",
+//                    "app_package" : "com.msy.globalaccess"
+//            ]
+        }
+        EnvironPre{
+            dimension  "Environ"
+            buildConfigField "String", "ENVIRONMENT", '"pre_environ"'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ["*.jar"], dir: "libs")
+
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+
+    //butterknife
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+
+    //rxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
+    //rxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit2Version"
+    //retorfit-rx-adapter
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit2Version"
+    //retorfit-rx-adapter
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2Version"
+    //fastjson-converter
+//    compile "org.ligboy.retrofit2:converter-fastjson-android:2.3.0"
+    //logger
+    implementation 'com.orhanobut:logger:2.1.1'
+}
