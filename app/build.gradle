@@ -32,8 +32,8 @@ android {
             multiDexEnabled false
 
             android.applicationVariants.all { variant ->
-                variant.outputs.all  {
-                    outputFileName  = "mvp-"+buildType.name+"-v"+defaultConfig.versionName+"-"+productFlavors[0].name+"-"+releaseTime()+".apk"
+                variant.outputs.all {
+                    outputFileName = "mvp-" + buildType.name + "-v" + defaultConfig.versionName + "-" + productFlavors[0].name + "-" + releaseTime() + ".apk"
 //                                .toLowerCase()
                 }
             }
@@ -45,10 +45,10 @@ android {
     }
 
 
-    productFlavors{
+    productFlavors {
 
-        EnvironTest{
-            dimension  "Environ"
+        EnvironTest {
+            dimension "Environ"
             buildConfigField "String", "ENVIRONMENT", '"debug_environ"'
 //            manifestPlaceholders = [
 //                    "app_name"    : "全域宝",
@@ -57,8 +57,8 @@ android {
 //                    "app_package" : "com.msy.globalaccess"
 //            ]
         }
-        EnvironPre{
-            dimension  "Environ"
+        EnvironPre {
+            dimension "Environ"
             buildConfigField "String", "ENVIRONMENT", '"pre_environ"'
         }
     }
@@ -66,6 +66,9 @@ android {
 }
 
 dependencies {
+    implementation "com.android.support:design:$rootProject.designVersion"
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+
     compile fileTree(include: ["*.jar"], dir: "libs")
 
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"

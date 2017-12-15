@@ -7,4 +7,10 @@
     <string name="internet_error">网络异常,请检查网络设置</string>
     <string name="request_error">参数异常,请稍后再试</string>
     <string name="resolve_error">结果解析异常,请稍后再试</string>
+    <string name="title_activity_permission">PermissionActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -2,7 +2,7 @@ package com.demo.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.demo.utils.ToastUtil;
 
@@ -13,16 +13,18 @@ import butterknife.Unbinder;
  * Created by pepyspeng on 2017/2/25.
  */
 
-public abstract class BaseActivity<V,T extends IBaseContract.Presenter<V>> extends FragmentActivity {
+public abstract class BaseActivity<V,T extends IBaseContract.Presenter<V>> extends AppCompatActivity {
 
     protected T mPresneter ;
+    protected Unbinder mUnbinder;
+
     /**
      * create presenter
      * @return
      */
     protected abstract T createPresenter();
 
-    protected Unbinder mUnbinder;
+    protected abstract int getLayoutID();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public abstract class BaseActivity<V,T extends IBaseContract.Presenter<V>> exten
         ToastUtil.showToast(message);
     }
 
-    protected abstract int getLayoutID();
+
 
     @Override
     protected void onDestroy() {

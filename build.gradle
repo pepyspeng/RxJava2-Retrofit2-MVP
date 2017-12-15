@@ -34,6 +34,8 @@ ext {
 
     //Dependencies
     supportLibraryVersion = "25.3.0"
+    designVersion = "25.4.0"
+    constrainLayouttVersion = "1.0.2"
     butterknifeVersion = "8.8.1"
 
     rxJavaVersion = "2.1.7"
@@ -42,4 +44,5 @@ ext {
     loggerVersion = "2.1.1"
     rxpermissions2Version = "0.9.4"
     rxbinding2Version = "2.0.0"
+
 }
