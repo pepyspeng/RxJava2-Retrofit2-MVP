@@ -4,7 +4,7 @@ import com.demo.base.BasePresenterImpl;
 import com.demo.business.login.contract.ILoginContract;
 import com.demo.data.bean.BaseBean;
 import com.demo.data.bean.LoginBean;
-import com.demo.data.module.LoginInteractorImpl;
+import com.demo.data.interactorImpl.LoginInteractorImpl;
 
 import io.reactivex.disposables.Disposable;
 

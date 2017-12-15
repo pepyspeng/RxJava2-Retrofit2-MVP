@@ -9,6 +9,12 @@
 
     <color name="white">#FFFFFF</color>
 
+    <!--分割线-->
+    <color name="divider_color_dark">#E4E4E4</color>
+    <color name="divider_color">#F0F0F0</color>
+
+    <!--提示文版信息颜色-->
+    <color name="text_hint">#4a4a4a</color>
 
     <!-- 自定义pageView  start-->
     <color name="red">#F34235</color>

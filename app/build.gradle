@@ -91,4 +91,8 @@ dependencies {
 //    compile "org.ligboy.retrofit2:converter-fastjson-android:2.3.0"
     //logger
     implementation "com.orhanobut:logger:$rootProject.loggerVersion"
+    //rxpermissions2
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxpermissions2Version@aar"
+    //rxbinding2
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbinding2Version"
 }

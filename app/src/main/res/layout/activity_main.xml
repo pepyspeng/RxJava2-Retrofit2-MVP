@@ -74,14 +74,14 @@
             android:text="不同下面"
             android:textColor="@android:color/white"/>
         <Button
-            android:id="@+id/btn_toast2"
+            android:id="@+id/btn_rxpermission"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@color/colorPrimary"
             android:foreground="?attr/selectableItemBackground"
-            android:text="不同中间"
+            android:text="点击确认权限"
             android:textColor="@android:color/white"/>
     </LinearLayout>
 </RelativeLayout>
