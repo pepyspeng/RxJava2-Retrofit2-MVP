@@ -35,7 +35,11 @@ public abstract class BaseActivity<V,T extends IBaseContract.Presenter<V>> exten
         mPresneter.attachView((V) this);
         setContentView(getLayoutID());
         ButterKnife.bind(this);
+        init();
+
     }
+
+    protected abstract void init();
 
     protected void showToast(String message){
         ToastUtil.showToast(message);

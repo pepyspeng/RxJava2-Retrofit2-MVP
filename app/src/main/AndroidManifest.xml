@@ -23,6 +23,10 @@
         <activity
             android:name=".business.permission.PermissionActivity"
             android:label="@string/title_activity_permission"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".business.juhe.main.ChoiceActivity"
+            android:label="@string/title_activity_choice"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

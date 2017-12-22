@@ -1,4 +1,4 @@
-package com.demo.data.Net;
+package com.demo.data.net;
 
 import com.demo.base.BaseApplication;
 import com.orhanobut.logger.Logger;
@@ -22,7 +22,7 @@ public class NetConstants {
     public static final int TYPE_COUNT = 3;
 
     //debug     测试环境
-    public static final String DEBUG_BASE_URL = "http://www.wootide.net/globalTourism/";
+    public static final String DEBUG_BASE_URL = "http://v.juhe.cn/";
     //pre       预上线
     public static final String INTEGRATION_BASE_URL = "http://test1.wootide.net/globalTourism/";
     //release   正式环境

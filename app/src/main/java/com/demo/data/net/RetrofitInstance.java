@@ -1,4 +1,4 @@
-package com.demo.data.Net;
+package com.demo.data.net;
 
 import android.text.TextUtils;
 import android.util.SparseArray;
@@ -31,7 +31,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.demo.base.BaseApplication.mEnvType;
-import static com.demo.data.Net.NetConstants.TYPE_COUNT;
+import static com.demo.data.net.NetConstants.TYPE_COUNT;
 
 
 /**

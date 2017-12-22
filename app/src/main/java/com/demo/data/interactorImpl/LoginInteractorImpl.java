@@ -1,7 +1,7 @@
 package com.demo.data.interactorImpl;
 
 import com.demo.business.login.contract.ILoginContract;
-import com.demo.data.Net.RetrofitInstance;
+import com.demo.data.net.RetrofitInstance;
 import com.demo.data.api.ILoginApi;
 import com.demo.data.bean.BaseBean;
 import com.demo.data.bean.LoginBean;

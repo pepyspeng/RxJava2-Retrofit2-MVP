@@ -1,19 +1,17 @@
 package com.demo.business.login.view;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.demo.R;
 import com.demo.base.BaseActivity;
 import com.demo.base.IBaseContract;
+import com.demo.business.juhe.main.ChoiceActivity;
 import com.demo.business.login.contract.ILoginContract;
 import com.demo.business.login.contract.presneter.LoginPresneterImpl;
 import com.demo.business.permission.PermissionActivity;
-import com.demo.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -49,6 +47,11 @@ public class MainActivity extends BaseActivity<ILoginContract.View, IBaseContrac
     }
 
     @Override
+    protected void init() {
+
+    }
+
+    @Override
     protected int getLayoutID() {
         return R.layout.activity_main;
     }
@@ -61,7 +64,7 @@ public class MainActivity extends BaseActivity<ILoginContract.View, IBaseContrac
                 PermissionActivity.callActivity(MainActivity.this);
                 break;
             case R.id.btn_toast:
-                ToastUtil.showToast("哈哈哈",Toast.LENGTH_SHORT, Gravity.CENTER);
+                ChoiceActivity.callActivity(MainActivity.this);
                 break;
             case R.id.btn_toast1:
                 break;

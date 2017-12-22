@@ -93,6 +93,11 @@ public class PermissionActivity extends BaseActivity<IPermissionContract.View, I
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @Override
+    protected void init() {
+
+    }
+
 
     private void initPermission(){
         rxPermissions = new RxPermissions(this);

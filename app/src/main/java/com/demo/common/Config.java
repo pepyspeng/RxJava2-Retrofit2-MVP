@@ -7,4 +7,6 @@ package com.demo.common;
  * 配置常用的文件
  */
 public class Config {
+
+    public final static String JUHE_KEY = "23100f6c6034f7e711a26dcb45c6eed5";
 }
