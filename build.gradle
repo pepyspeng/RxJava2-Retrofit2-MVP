@@ -39,7 +39,7 @@ ext {
     butterknifeVersion = "8.8.1"
 
     rxJavaVersion = "2.1.7"
-    rxAndroidVersion = "2.0.1"
+    rxAndroidVersion = "2.0.2"
     retrofit2Version = "2.3.0"
     loggerVersion = "2.1.1"
     rxpermissions2Version = "0.9.4"

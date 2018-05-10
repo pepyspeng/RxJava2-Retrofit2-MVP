@@ -21,10 +21,15 @@ import io.reactivex.disposables.Disposable;
  */
 public class ChoiceInteractorImpl implements IJuheMainContract.interactor {
 
+    IChoiceApi choiceApi;
+
+    public ChoiceInteractorImpl() {
+        choiceApi = RetrofitInstance.getRetrofit().create(IChoiceApi.class);
+    }
 
     @Override
-    public Disposable getChoiceList(RequestCallBack<BaseBean<ChoiceBean>> callBack,HashMap<String, String> paramsMap) {
-        IChoiceApi choiceApi = RetrofitInstance.getRetrofit().create(IChoiceApi.class);
+    public Disposable getChoiceList(RequestCallBack<BaseBean<ChoiceBean>> callBack, HashMap<String, String> paramsMap) {
+
         Observable observable = choiceApi.getChoice(paramsMap);
         Disposable disposable = RxJavaUtils.getDisposable(observable, new DefaultObserver<>(callBack));
         return disposable;

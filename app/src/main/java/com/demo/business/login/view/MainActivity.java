@@ -29,8 +29,6 @@ public class MainActivity extends BaseActivity<ILoginContract.View, IBaseContrac
     @BindView(R.id.login_submit)
     Button login_submit;
 
-    @BindView(R.id.btn_rxpermission)
-    Button btn_rxpermission;
 
     private LoginPresneterImpl presneter;
 
@@ -57,7 +55,7 @@ public class MainActivity extends BaseActivity<ILoginContract.View, IBaseContrac
     }
 
 
-    @OnClick({R.id.login_submit,R.id.btn_toast,R.id.btn_toast1})
+    @OnClick({R.id.login_submit,R.id.btn_toast})
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_submit:
@@ -66,8 +64,7 @@ public class MainActivity extends BaseActivity<ILoginContract.View, IBaseContrac
             case R.id.btn_toast:
                 ChoiceActivity.callActivity(MainActivity.this);
                 break;
-            case R.id.btn_toast1:
-                break;
+
 
         }
     }
