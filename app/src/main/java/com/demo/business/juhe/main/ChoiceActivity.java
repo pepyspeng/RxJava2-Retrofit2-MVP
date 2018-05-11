@@ -12,9 +12,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.demo.R;
 import com.demo.base.BaseActivity;
+import com.demo.base.GlideApp;
 import com.demo.base.IBaseContract;
 import com.demo.business.juhe.main.contract.IJuheMainContract;
 import com.demo.business.juhe.main.contract.presneter.JuheMainPresneterImpl;
@@ -83,7 +83,7 @@ public class ChoiceActivity extends BaseActivity implements IJuheMainContract.Vi
                 holder.text(R.id.tv_title_content,model.getTitle())
                         .text(R.id.tv_title_desp,model.getTitle());
                 ImageView imageView = (ImageView) holder.findViewById(R.id.choice_img);
-                Glide.with(ChoiceActivity.this).load(model.getFirstImg()).into(imageView);
+                GlideApp.with(ChoiceActivity.this).load(model.getFirstImg()).into(imageView);
             }
         });
     }

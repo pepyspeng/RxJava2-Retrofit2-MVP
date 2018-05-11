@@ -30,7 +30,7 @@ public class ChoiceInteractorImpl implements IJuheMainContract.interactor {
     @Override
     public Disposable getChoiceList(RequestCallBack<BaseBean<ChoiceBean>> callBack, HashMap<String, String> paramsMap) {
 
-        Observable observable = choiceApi.getChoice(paramsMap);
+        Observable observable = choiceApi.getChoice("weixin/query",paramsMap);
         Disposable disposable = RxJavaUtils.getDisposable(observable, new DefaultObserver<>(callBack));
         return disposable;
     }
