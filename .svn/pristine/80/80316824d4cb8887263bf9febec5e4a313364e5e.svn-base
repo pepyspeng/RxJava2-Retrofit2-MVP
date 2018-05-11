@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:navigationIcon="@mipmap/back"
+    app:navigationIcon="@mipmap/back"
+    app:contentInsetStart="0dp"
+    app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/imgBtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:background="@android:color/transparent"
+        android:paddingLeft="@dimen/material_layout_app_bar_horizontal_padding"
+        android:paddingRight="@dimen/material_layout_app_bar_horizontal_padding"
+        android:src="@mipmap/icon_home"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvToolbarCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_title_size"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivToolbarRight"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="@dimen/material_layout_app_bar_horizontal_padding"
+        android:paddingRight="@dimen/material_layout_app_bar_horizontal_padding"
+        android:src="@mipmap/icon_search"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvToolbarRight"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="right"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingLeft="@dimen/material_layout_app_bar_horizontal_padding"
+        android:paddingRight="@dimen/material_layout_app_bar_horizontal_padding"
+        android:textSize="@dimen/main_title_size"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/rlHead"
+        layout="@layout/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHead"
+        android:background="@color/bgColor">
+
+    </FrameLayout>
+
+</RelativeLayout>
