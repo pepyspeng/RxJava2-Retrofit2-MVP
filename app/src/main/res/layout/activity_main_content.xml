@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.tapup.widget.NoScrollViewPager
+        android:id="@+id/vpContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_height"/>
+
+
+    <RadioGroup
+        android:id="@+id/main_content_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:background="@color/main_background_color"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radio_main_home"
+            style="@style/MainBottomRadioButtonStyle"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_main_home_btn"
+            android:text="@string/main_home"/>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radio_main_competition"
+            style="@style/MainBottomRadioButtonStyle"
+            android:drawableTop="@drawable/selector_main_competition_btn"
+            android:text="@string/main_competition"/>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radio_main_game"
+            style="@style/MainBottomRadioButtonStyle"
+            android:drawableTop="@drawable/selector_main_game_btn"
+            android:text="@string/main_game"/>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radio_main_market"
+            style="@style/MainBottomRadioButtonStyle"
+            android:drawableTop="@drawable/selector_main_market_btn"
+            android:text="@string/main_market"/>
+    </RadioGroup>
+
+</RelativeLayout>

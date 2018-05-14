@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/c_main_gray"/>
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/competition_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:tl_textsize="@dimen/sp_14"
+        app:tl_tab_space_equal="true"
+        app:tl_textUnselectColor="@color/gray3"
+        app:tl_textSelectColor="@color/white"
+        app:tl_indicator_color="@color/c_main_red"
+        app:tl_indicator_corner_radius="4dp"
+        app:tl_indicator_margin_left="12dp"
+        app:tl_indicator_margin_right="12dp"
+        app:tl_indicator_margin_top="12dp"
+        app:tl_indicator_margin_bottom="12dp"
+        app:tl_indicator_style="BLOCK"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_main_gray"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/competition_vivewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

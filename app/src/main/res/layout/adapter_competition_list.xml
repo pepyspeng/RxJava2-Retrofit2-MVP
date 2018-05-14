@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="15dp">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/icon_competition_logo"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="6.5"
+            android:layout_marginLeft="18dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/competition_adapter_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T17国际邀请赛 初赛"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/gray3"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/competition_adapter_tv_bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/competition_adapter_tv_title"
+                android:layout_marginTop="8dp"
+                android:text="奖金：6000钻石"
+                android:textColor="@color/c646464"
+                android:textSize="@dimen/sp_14"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/competition_adapter_tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/competition_adapter_tv_bonus"
+                android:layout_alignParentEnd="true"
+                android:text="参赛人数：36/60人"
+                android:textColor="@color/c646464"
+                android:textSize="@dimen/sp_14"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/competition_adapter_tv_bonus"
+                android:layout_marginTop="12dp"
+                android:text="2018年4月5日-2018年5月4日"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/gray9"
+                android:background="@drawable/bg_gray_retangle_25dp"
+                />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@color/c_main_gray"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="5dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/competition_adapter_img_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_competition_signuping"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/competition_adapter_tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/competition_signuping"
+                android:textColor="@color/c_main_red"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_main_gray"
+        android:layout_marginLeft="15dp"/>
+</LinearLayout>

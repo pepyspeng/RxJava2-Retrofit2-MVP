@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/shap_bac_white_raius"
+    android:padding="10dp"
+    android:layout_marginTop="15dp"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:id="@+id/iv_icon"
+        android:layout_width="80dp"
+        android:src="@mipmap/icon_main_right"
+        android:background="@drawable/shap_bac_white_raius"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textColor="#555555"
+        android:id="@+id/tv_title"
+        android:textStyle="bold"
+        android:text="aodjfasdfasdfasdfsdfasdfasdfasdfoasjdfoasijdfoaisjdfoaijsdfoaisjdf"
+        android:textSize="18dp"
+        android:maxLines="2"
+        android:lines="2"
+        android:ellipsize="end"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/tv_content"
+        android:textColor="#666666"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:text="aodjfasdfasdfasdfsdsdfsdfasdfasdfsdsdfasdfasdfsdsdfasdfasdfsdasdfasdfsdsdfasdfasdfsdfasdfasdfasdfoasjdfoasijdfoaisjdfoaijsdfoaisjdf"
+        android:textSize="12dp"
+        android:maxLines="2"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ababab"
+        android:layout_below="@+id/iv_icon"
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:text="2小时前"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/btn_see"
+        android:drawablePadding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/iv_icon"
+        android:background="@drawable/shap_bac_e5_raius"
+        android:drawableLeft="@mipmap/eye"
+        android:padding="5dp"
+        android:text="2245"
+        android:textColor="#666666" />
+</RelativeLayout>
